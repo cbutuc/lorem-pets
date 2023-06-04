@@ -1,0 +1,529 @@
+/* ------------------*/
+/* Custom Properties */
+/* ----------------- */
+
+:root {
+  /* colors */
+  --clr-white: rgb(255, 255, 255);
+  --clr-light-blue: rgb(245, 245, 245);
+
+  --clr-light-brown: rgb(240, 234, 218);
+  --clr-dark-brown: rgb(64, 64, 64);
+
+  --clr-blue: rgb(184, 203, 236);
+  --clr-fb: rgb(24, 119, 242);
+  --clr-pink: rgb(254, 117, 116);
+  --clr-pink-shade: rgb(229, 105, 104);
+  --clr-dark-blue: rgb(3, 28, 92);
+  --clr-dark-blue-shade: rgb(2, 20, 64);
+
+  /* font-size */
+  --fs-300: 0.875rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.5625rem;
+  --fs-600: 2.0625rem;
+  --fs-700: 4.0625rem;
+  --fs-900: 5rem;
+
+  /* font-weight*/
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* font-families */
+  --ff-sans: "DM sans", sans-serif;
+  --ff-cursive: "Fredoka", sans-serif;
+}
+
+/* ----------------------------- */
+/*      Josh W Comeau Reset      */
+/* ----------------------------- */
+
+/*
+  1. Box sizing
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/*
+    Typographic tweaks!
+    4. Set up the body
+    
+  */
+body {
+  font-family: var(--ff-sans);
+  color: var(--clr-dark-blue);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* My additions */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.button,
+.main-nav-list,
+label {
+  font-family: var(--ff-cursive);
+}
+
+h2 {
+  font-size: var(--fs-600);
+}
+
+h3,
+label {
+  font-size: var(--fs-500);
+}
+
+h2,
+h3,
+h4,
+h5,
+label {
+  font-weight: var(--fw-600);
+  letter-spacing: 0.12rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav-list a,
+.button,
+.button:link,
+.button:visited,
+.fa-brands,
+.fa-solid,
+dd a {
+  transition: all 0.3s;
+}
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+/* Colors */
+.container-bg-light {
+  background-color: var(--clr-light-blue);
+}
+
+.container-bg-accent {
+  background-color: var(--clr-light-brown);
+}
+
+.container-bg-dark {
+  background-color: var(--clr-blue);
+}
+
+/* --------------------- */
+.text-light {
+  color: var(--clr-white);
+}
+
+.text-dark-brown {
+  color: var(--clr-dark-brown);
+}
+
+.text-pink {
+  color: var(--clr-pink);
+}
+
+.text-fb {
+  color: var(--clr-fb);
+}
+
+.text-blue {
+  color: var(--clr-blue);
+}
+/* ------------------------------ */
+
+/*  */
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.padding {
+  padding-inline: 10rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* The design system spacing */
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+/* Typography */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+/* ----------------------------------------------------- */
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+
+.fw-500 {
+  font-weight: var(--fw-500);
+}
+
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+/* -------------------------------- */
+/*             Styling              */
+/* -------------------------------- */
+
+/* ----General---- -----------------------------*/
+
+.section-hero,
+.section-about,
+.section-donate,
+.main-footer,
+.section-signup {
+  position: relative;
+}
+
+/* btn */
+.button,
+.button:link,
+.button:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  border: none;
+}
+
+.btn--full,
+.btn--outline,
+.btn--full-blue {
+  font-weight: var(--fw-600);
+  letter-spacing: 0.3rem;
+}
+
+.btn--full {
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--clr-pink-shade);
+}
+
+.btn--full-blue {
+  background-color: var(--clr-blue);
+  color: var(--clr-dark-blue);
+}
+
+.btn--full-blue:hover,
+.btn--full-blue:active,
+.btn--full-blue:focus-visible,
+.active {
+  background-color: var(--clr-pink-shade);
+  color: var(--clr-white);
+}
+
+.btn-space {
+  margin-block: 5rem;
+}
+
+/* wave */
+.wave {
+  position: absolute;
+
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  height: 47px;
+}
+
+.wave .shape-fill {
+  fill: var(--clr-white);
+}
+/* ----------------------------------------- */
+.shape-top {
+  top: 0;
+}
+
+.shape-bottom {
+  bottom: 0;
+}
+
+.shape-top svg,
+.shape-bottom svg {
+  width: calc(100% + 1.3px);
+}
+
+/* cards */
+.card {
+  background-color: var(--clr-light-blue);
+}
+
+.section-cards img,
+.section-pet-gallery img {
+  height: 15.625rem;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 0 91%);
+}
+
+.card-body .button {
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+}
+
+.card-body .button:hover {
+  background-color: var(--clr-dark-blue-shade);
+}
+
+/* ----Navbar---- ---------------------------------------------*/
+
+.navbar-brand {
+  width: 11rem;
+}
+
+.main-nav-list {
+  list-style: none;
+}
+
+.main-nav-list li:last-of-type a {
+  color: var(--clr-pink);
+}
+
+.main-nav-list a:hover {
+  color: var(--clr-pink);
+}
+
+/* ---------------------------------** */
+/* Makeing active nav-link */
+
+.nav-link[aria-current="page"]::after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: var(--clr-pink);
+  display: block;
+  margin: 0px auto;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--clr-pink);
+}
+
+/* ------------------------------------------**** */
+
+.btn-mobile-nav {
+  display: none;
+  color: var(--clr-dark-blue);
+  background: none;
+  border: none;
+}
+
+.close-mobile-nav {
+  --fa-display: none;
+}
+
+/* Sticky navigation */
+
+.sticky {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  background-color: rgba(245, 245, 245, 0.9);
+  width: 100%;
+
+  border-bottom: 2px solid var(--clr-white);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  backdrop-filter: blur(5px);
+}
+
+/* SECTIONS HIDDEN EFFECT */
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/* Donate Section ----------------------------------------------------  */
+
+#donate {
+  min-height: 600px;
+}
+
+/* -----Footer------ ----------------------------------------------*/
+
+#footer {
+  min-height: 500px;
+}
+
+.main-footer__logo {
+  width: 15rem;
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 30px;
+}
+
+.fa-brands:hover,
+.fa-solid:hover,
+dd a:hover {
+  color: var(--clr-pink);
+}
+
+/* Media queries */
+@media (max-width: 1199px) {
+  #donate {
+    min-height: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  #footer {
+    min-height: 550px;
+  }
+  .main-footer__logo {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(245, 245, 245, 0.97);
+    font-size: var(--fs-600);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+  }
+
+  /* mobile navigation */
+
+  .nav-open .main-nav {
+    transform: translateX(0);
+  }
+
+  .nav-open .close-mobile-nav {
+    --fa-display: block;
+  }
+
+  .nav-open .open-mobile-nav {
+    --fa-display: none;
+  }
+}

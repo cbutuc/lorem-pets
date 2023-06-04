@@ -1,0 +1,26 @@
+#about {
+  min-height: 500px;
+}
+
+.bulb {
+  flex-shrink: 0;
+  max-height: 25rem;
+  max-width: 25rem;
+  background-color: var(--clr-blue);
+  border-radius: 32% 68% 73% 27% / 42% 36% 64% 58%;
+  overflow-y: hidden;
+}
+
+/* wave */
+.section-donate {
+  background-color: var(--clr-light-blue);
+}
+
+.shape-top,
+.section-donate .shape-bottom {
+  transform: rotate(180deg);
+}
+
+.section-donate .shape-bottom .shape-fill {
+  fill: var(--clr-light-brown);
+}

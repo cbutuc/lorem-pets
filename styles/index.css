@@ -1,0 +1,126 @@
+/* ------------ */
+/* Hero Section*/
+/* ------------ */
+
+#showcase {
+  min-height: 550px;
+}
+
+/* button */
+
+.btn--outline {
+  background-color: var(--clr-white);
+  color: var(--clr-dark-blue);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  box-shadow: inset 0 0 0 2px;
+}
+
+/* wave hero */
+.section-hero__wave {
+  bottom: 0;
+}
+
+.section-hero__wave svg {
+  width: calc(111% + 1.3px);
+}
+
+/* ---------------------- */
+/* Cards Section */
+/* ------------------------- */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "one two three"
+    "four five six";
+}
+
+/* ---------------- */
+/* About us section */
+/* ---------------- */
+
+#about {
+  min-height: 745px;
+}
+
+.shape-top,
+.shape-bottom {
+  transform: rotate(180deg);
+}
+
+.section-donate .shape-bottom .shape-fill {
+  fill: var(--clr-light-brown);
+}
+/* ------------------------------------------ */
+
+.flex {
+  display: flex;
+  gap: 3rem;
+}
+
+.flex > * {
+  width: 100%;
+}
+
+.section-about__img img {
+  min-width: 42rem;
+}
+
+/* Media queries */
+@media (max-width: 1199px) {
+  #about {
+    min-height: 200px;
+  }
+  .section-about__text h2 {
+    font-size: var(--fs-900);
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .section-about__img img {
+    min-width: 30rem;
+  }
+
+  .section-donate {
+    background-color: var(--clr-light-blue);
+  }
+
+  .section-donate span {
+    color: var(--clr-pink);
+  }
+}
+
+@media (max-width: 992px) {
+  #about {
+    min-height: 450px;
+  }
+  .section-about__text h2 {
+    padding-block: 5rem;
+  }
+  .grid {
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five six";
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero__wave svg {
+    width: calc(300% + 1.3px);
+    height: 33px;
+  }
+  .grid {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+  }
+}

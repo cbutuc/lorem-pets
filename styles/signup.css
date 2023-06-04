@@ -1,0 +1,44 @@
+#signup {
+  min-height: 700px;
+}
+
+.section-signup {
+  padding-top: 5rem;
+}
+
+button[type="submit"] {
+  padding-inline: 4rem;
+}
+
+.shape-top {
+  transform: rotate(180deg);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--clr-pink);
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .padding {
+    padding-inline: 5rem;
+  }
+
+  #signup {
+    min-height: 990px;
+  }
+
+  #footer {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding {
+    padding-inline: 2rem;
+  }
+
+  .section-donate span {
+    color: var(--clr-pink);
+  }
+}
