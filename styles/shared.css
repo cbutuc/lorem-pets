@@ -353,7 +353,8 @@ dd a {
 }
 
 .section-cards img,
-.section-pet-gallery img {
+.section-pet-gallery img,
+.section-our-team img {
   height: 15.625rem;
   object-fit: cover;
   clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 0 91%);

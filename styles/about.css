@@ -2,15 +2,19 @@
   min-height: 500px;
 }
 
-.bulb {
-  flex-shrink: 0;
-  max-height: 25rem;
-  max-width: 25rem;
-  background-color: var(--clr-blue);
-  border-radius: 32% 68% 73% 27% / 42% 36% 64% 58%;
-  overflow-y: hidden;
+.grid-ish {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
+.grid-ish > * {
+  flex: 1 1 14em;
+}
+
+.icon {
+  font-size: 20px;
+}
 /* wave */
 .section-donate {
   background-color: var(--clr-light-blue);
