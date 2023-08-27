@@ -17,6 +17,8 @@
   --clr-dark-blue: rgb(3, 28, 92);
   --clr-dark-blue-shade: rgb(2, 20, 64);
 
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   /* font-size */
   --fs-300: 0.875rem;
   --fs-400: 1.125rem;
