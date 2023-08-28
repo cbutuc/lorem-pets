@@ -39,7 +39,7 @@ User can:
 
 ## Demo
 
-You can see live demo [here](https://lorem-pets-cristina.netlify.app/index.html).
+You can see live demo [here](https://lorem-pets-c.netlify.app/).
 
 
 ## Acknowledgements
