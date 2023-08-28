@@ -15,7 +15,61 @@
 .icon {
   font-size: 20px;
 }
-/* wave */
+
+/* Slider */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  transition: transform 1s;
+}
+
+blockquote div {
+  border-radius: 1%;
+  box-shadow: 0 0 0 10px var(--clr-blue), var(--box-shadow);
+  background-color: var(--clr-blue);
+}
+
+blockquote img {
+  border-radius: 2%;
+
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.slide:nth-child(1),
+.slide:nth-child(2) {
+  position: absolute;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  border: none;
+  background: var(--clr-blue);
+  color: var(--clr-dark-blue);
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 3.5%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 3.5%;
+  transform: translate(50%, -50%);
+}
+
+/* Wave */
 .section-donate {
   background-color: var(--clr-light-blue);
 }
